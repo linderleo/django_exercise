@@ -1,11 +1,14 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-#from rest_framework import permissions
+from rest_framework.permissions import IsAuthenticated
 from .models import GithubProject
 from .serializers import GithubProjectSerializer
 
 class ProjectViews(APIView):
+
+    permission_classes = (IsAuthenticated,)
+
     def post(self, request):
         serializer = GithubProjectSerializer(data=request.data)
         if serializer.is_valid():
