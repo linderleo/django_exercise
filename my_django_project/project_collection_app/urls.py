@@ -1,12 +1,14 @@
 from django.urls import path
 #from .views import ProjectViews
-from .views import GithubProjectList
-from .views import GithubProjectDetail
+from .views import GithubProjectList, GithubProjectDetail, WebhookList, WebhookDetail
+#from .views import GithubProjectDetail
 
 
 urlpatterns = [
     path('github_projects/', GithubProjectList.as_view()),
-    path('github_projects/<int:pk>', GithubProjectDetail.as_view())
+    path('github_projects/<int:pk>', GithubProjectDetail.as_view()),
+    path('webhooks/', WebhookList.as_view()),
+    path('webhooks/<int:pk>', WebhookDetail.as_view())
 ]
 
 #urlpatterns = [

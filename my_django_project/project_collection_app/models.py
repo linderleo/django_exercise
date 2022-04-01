@@ -16,3 +16,12 @@ class GithubProject(models.Model):
 
     def __str__(self):
         return f"ID: {self.id}, Name: {self.name}, Rating: {self.rating}, Created: {self.created}, Owner: {self.owner}"
+
+class Webhook(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    url = models.CharField(max_length=255)
+    created = models.DateTimeField(auto_now_add = True, auto_now = False, blank = True)
+    owner = models.ForeignKey(User, on_delete = models.CASCADE, blank = True, null = True)
+
+    def __str__(self):
+        return f"ID: {self.id}, URL: {self.url}, Created: {self.created}, Owner: {self.owner}"
