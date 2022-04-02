@@ -8,9 +8,25 @@ import httpx
 import asyncio
 
 class GithubProjectList(generics.ListCreateAPIView):
-    queryset = GithubProject.objects.all()
     serializer_class = GithubProjectSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        queryset = GithubProject.objects.all()
+        sort_by = self.request.query_params.get('sort_by')
+        order = self.request.query_params.get('order')     
+        if sort_by == "rating":
+            if order == "desc":
+                return queryset.order_by('-rating')
+            else:
+                return queryset.order_by('rating')
+        elif sort_by == "created":
+            if order == "desc":
+                return queryset.order_by('-created')
+            else:
+                return queryset.order_by('created')
+        else:
+            return queryset
 
     # Below we do asynchronous webhook calls when we add a new project entry
     def perform_create(self, serializer):
