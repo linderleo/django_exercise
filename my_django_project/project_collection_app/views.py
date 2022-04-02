@@ -14,7 +14,7 @@ class GithubProjectList(generics.ListCreateAPIView):
 
     # Below we do asynchronous webhook calls when we add a new project entry
     def perform_create(self, serializer):
-        async def main(data, urls):
+        async def main(data: dict, urls: list[str]):
             async with httpx.AsyncClient() as client:
                 for hook in urls:
                     print(f"Calling webhook: {hook}")
