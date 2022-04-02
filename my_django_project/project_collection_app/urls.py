@@ -5,10 +5,10 @@ from .views import GithubProjectList, GithubProjectDetail, WebhookList, WebhookD
 
 
 urlpatterns = [
-    path('github_projects/', GithubProjectList.as_view()),
-    path('github_projects/<int:pk>', GithubProjectDetail.as_view()),
-    path('webhooks/', WebhookList.as_view()),
-    path('webhooks/<int:pk>', WebhookDetail.as_view())
+    path('github_projects/', GithubProjectList.as_view(), name="github_projects"),
+    path('github_projects/<int:pk>', GithubProjectDetail.as_view(), name="project_entry"),
+    path('webhooks/', WebhookList.as_view(), name="webhooks"),
+    path('webhooks/<int:pk>', WebhookDetail.as_view(), name="webhook_entry")
 ]
 
 #urlpatterns = [
