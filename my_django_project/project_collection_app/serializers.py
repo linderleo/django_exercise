@@ -5,7 +5,7 @@ class GithubProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = GithubProject
         fields = ('__all__')
-
+        ordering = ['id']
         extra_kwargs = {
             'owner': { 'read_only': True }
         }
@@ -14,7 +14,7 @@ class WebhookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Webhook
         fields = ('__all__')
-
+        ordering = ['id']
         extra_kwargs = {
             'owner': { 'read_only': True }
         }
