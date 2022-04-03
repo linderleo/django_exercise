@@ -1,0 +1,7 @@
+PUT http://localhost:8000/api/webhooks/1
+Authorization: token <>
+Content-Type: application/json
+
+{
+    "url": "http://huuhaa.foobar"
+}

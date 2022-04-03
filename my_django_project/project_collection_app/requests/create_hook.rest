@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/webhooks/
+Authorization: token <>
+Content-Type: application/json
+
+{
+    "url": "https://eo5guxxhkqk17qp.m.pipedream.net"
+}

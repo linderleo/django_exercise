@@ -1,0 +1,5 @@
+my_django_project/my_django_project/__pycache__/*
+my_django_project/db.sqlite3
+my_django_project/project_collection_app/migrations/
+my_django_project/project_collection_app/__pycache__/
+my_django_project/project_collection_app/requests
