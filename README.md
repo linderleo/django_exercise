@@ -1,4 +1,9 @@
 # django_exercise
+#
+# This application implements a system where a user can save interesting
+# GitHub projects (project entries). Entries are stored with name, description,
+# link and rating. A user may also configure webhooks (receiver urls) which get 
+# triggered when any user creates a new valid GitHub project entry in the system.
 
 1) create virtual python environment
 python3 -m venv /Users/<home>/.local/lib/venv/django_env
