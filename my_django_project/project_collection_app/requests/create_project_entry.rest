@@ -1,0 +1,11 @@
+POST http://localhost:8000/api/github_projects/
+Authorization: token <>
+Content-Type: application/json
+
+{
+    "name": "UUSI KOE 3: webhook useampaan kohteeseen kerralla",
+    "description": "kuvausta tässä",
+    "link": "http://localhost.usea",
+    "rating": 1
+   
+}

@@ -1,0 +1,10 @@
+PUT http://localhost:8000/api/github_projects/26
+Authorization: token <>
+Content-Type: application/json
+
+{
+    "name": "testiprojekti YYY",
+    "description": "tämä on testiprojektin kuvaus YYYY",
+    "link": "http://localhost.huuhaaY",
+    "rating": 2
+}

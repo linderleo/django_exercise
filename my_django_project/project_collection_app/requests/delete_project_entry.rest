@@ -1,0 +1,2 @@
+DELETE http://localhost:8000/api/github_projects/30
+Authorization: token <>

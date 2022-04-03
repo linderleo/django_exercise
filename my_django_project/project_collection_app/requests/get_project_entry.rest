@@ -1,0 +1,2 @@
+GET http://localhost:8000/api/github_projects/6
+Authorization: token <>
